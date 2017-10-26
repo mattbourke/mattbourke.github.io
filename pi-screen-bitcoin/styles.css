@@ -1,0 +1,40 @@
+
+.body {
+  background-color: #F4ECEC;
+  color: #252424;
+}
+
+.main-price {
+  font-size: 58px;
+  font-weight: bold;
+}
+
+.page-container {
+  max-width: 480px;
+  max-height: 320px;
+}
+
+
+.image-container {
+  text-align: center;
+}
+
+.direction-up {
+  color: #2EE165;
+}
+
+.direction-down {
+  color: #FB1E23;
+}
+
+.text-color-green {
+  color: #2EE165;
+}
+
+.text-color-orange {
+  color: #E37320;
+}
+
+.text-color-red {
+  color: #FB1E23;
+}
