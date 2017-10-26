@@ -29,7 +29,7 @@ function getMempoolColor(mempoolCount) {
   return mempoolColor;
 }
 
-//Store 20 most recent prices
+//Store 10 most recent prices
 let recentPricesArray = [];
 
 function updateRecentPricesArray(price) {
