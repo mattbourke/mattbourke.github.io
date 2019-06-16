@@ -109,6 +109,37 @@ priceTicker.bind('price_update', function(data) {
   }
 });
 
+function getCoinJarPrice() {
+
+  $.get( "https://api.coinjar.com/v3/exchange_rates.json", function( response ) {
+    const price = getFormattedPrice('$', response.exchange_rates.BTCUSD.bid, 'USD');
+    $('#coinjar').html(price);
+  });
+
+}
+
+getCoinJarPrice()
+
+
+function getACXPrice() {
+
+  $.get( "https://acx.io/api/v2/tickers/btcaud.json", function( response ) {
+    const price = getFormattedPrice('$', response.ticker.sell, 'AUD');
+    $('#acx').html(price);
+  });
+
+}
+
+getACXPrice()
+
+
+setInterval(function(){
+  getACXPrice();
+  getCoinJarPrice();
+}, 10000);
+
+
+
 // let's reload the page every hour incase something gets lazy.
 setTimeout(function(){
   window.location.reload(1);
